@@ -32,4 +32,37 @@
    33  python src/load_data.py
    34  dvc repro
    35  dvc repro
+
+   37  git add . && git commit -m "Added stages in yaml file & load_data"
+   38  git push origin main
+   39  touch src/split_data.py
+   40  python
+   41  pip install sklearn
+   42  sklearn --version
+   43  print('The scikit-learn version is {}.'.format(sklearn.__version__))
+   44  sklearn.__version__
+   45  pip install scikit-learn
+   46  dvc repro
+   47  dvc repro
+   48  git add . && git commit -m "Stage 2 is completed"
+   49  git push origin main
+   50  touch src/train_and_evaluate.py
+   51  mkdir reports
+   52  touch reports/params.json
+   53  touch reports/score.json
+   54  dvc repro
+   55  dvc repro
+   56  dvc repro
+   57  dvc report
+   58  dvc repro
+   59  dvc repro
+   60  dvc repro
+   61  dvc repro
+   62  dvc repro
+   63  dvc params diff
+   64  dvc metrics show
+   65  dvc metrics diff
+   66  git add . && git commit -m "Stage 3 is completed"
+   67  git push origin main
+
     
