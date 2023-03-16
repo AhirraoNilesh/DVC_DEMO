@@ -30,7 +30,17 @@ def Predict(data):
     return prediction[0]
     
 def api_response(request):
-    pass
+    
+    try:
+        data=np.array([list(request.json.values())])
+        response=Predict(data)
+        response={"response":response}
+        return response
+    except Exception as e:
+        print(e)
+        error={"error": "Something went wrong..Try Again"}
+        return render_template("404.html",error=error)
+
 
 
 @app.route("/",methods=["GET","POST"])
