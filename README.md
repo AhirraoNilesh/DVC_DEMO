@@ -65,4 +65,12 @@
    66  git add . && git commit -m "Stage 3 is completed"
    67  git push origin main
 
-    
+   Crate artifact folder
+   mkdir artifacts
+
+   mlflow server command:
+
+   mlflow server \
+       --backend-store-uri sqlite:///mlflow.db \
+       --default-artifact-root ./artifacts \
+       --host 0.0.0.0 -p 1234

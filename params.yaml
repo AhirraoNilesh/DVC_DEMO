@@ -28,3 +28,11 @@ reports:
   scores: reports/score.json
 
 webapp_model_dir: prediction_service/model/model.joblib
+
+mlflow_config:
+  artifacts_dir: artifacts
+  experiments_name: ElasticNet regression
+  run_name: mlflow
+  registered_model_name: ElasticWineModel
+  remote_server_url: http://0.0.0.0:1234
+  
